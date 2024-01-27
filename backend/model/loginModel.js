@@ -21,20 +21,7 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-// userSchema.pre("save", async function (next) {
-//   if (this.isModified("password") || this.isNew) {
-//     const saltRounds = 10;
-//     try {
-//       const hashedPassword = await bcrypt.hash(this.password, saltRounds);
-//       this.password = hashedPassword;
-//       next();
-//     } catch (error) {
-//       return next(error); 
-//     }
-//   } else {
-//     return next();
-//   }
-// });
+
 
 const userModel = mongoose.model("User", userSchema);
 
